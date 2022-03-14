@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas 
+        (Jamón y Queso, Muzzarella, Morrones). 
+        Al seleccionar una, mostrar en un objeto de tipo TEXT el precio de la misma. </p>
+    <form>
+        <p>Tipos de Pizza<select id="select1" onChange="mostrarPrecio()">
+            <option value="" selected="selected">-</option>
+            <option value="15">Jamón y Queso</option>
+            <option value="20">Muzzarella</option>
+            <option value="25">Morrones</option>
+        </select></p>
+        <p>Pizza seleccionada:<input type="text" id="text1"></p>
+        <p>Precio:<input type="text" id="text2"></p>
+    </form>
+
+    <script>
+        function mostrarPrecio(){
+            let seleccion = document.getElementById('select1');
+            document.getElementById('text1').value = seleccion.options[seleccion.selectedIndex].text;
+            document.getElementById('text2').value = seleccion.options[seleccion.selectedIndex].value;
+        }
+    </script>
+</body>
+</html>

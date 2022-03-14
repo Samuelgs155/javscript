@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Crear un programa que permita cargar un entero en un text 
+        y al presionar un botón nos muestre dicho valor elevado al cubo (emplear la función alert). 
+    </p>
+
+    <form>
+        <label for="input1">ingrese un valor</label>
+        <input type="text" name="input1" id="input1"><br><br>
+        <button onclick="calcularCubo()">Calcular cubo</button>
+    </form>
+
+    <script>
+        function calcularCubo() {
+            var value = document.getElementById("input1").value;
+            var resultado = Math.pow(value, 3);
+            alert("El cubo de " + value + " es " + resultado);
+        }
+    </script>
+</body>
+</html>
