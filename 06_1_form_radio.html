@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+        Confeccionar una página que muestre dos objetos de la clase RADIO solicitando que seleccione 
+        si es mayor de 18 años o no. 
+        Al presionar un botón mostrar un alert indicando si puede ingresar al sitio o no. 
+    </p>
+
+    <form>
+        <input type="radio" id="radio1" name="edad">Mayor de 18 años
+        <br>
+        <input type="radio" id="radio2" name="edad">Menor de 18 años
+        <br>
+        <input type="button" value="Mostrar" onClick="mostrarSeleccionado()">
+    </form>
+
+    <script>
+        function mostrarSeleccionado() {
+            if (document.getElementById('radio1').checked) {
+                alert('Es mayor de 18 años');
+            }
+            if (document.getElementById('radio2').checked) {
+                alert('Es menor de 18 años');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Confeccionar una página que muestre tres checkbox que permitan seleccionar 
+        los deportes que practica el usuario (Fútbol, Básket, Tenis) 
+        Mostrar al presionar un botón los deportes que eligió
+    </p>
+
+    <form>
+        Deportes posibles:
+        <br>
+        <input type="checkbox" id="checkbox1">Fútbol
+        <br>
+        <input type="checkbox" id="checkbox2">Básket
+        <br>
+        <input type="checkbox" id="checkbox3">Tenis
+        <br>
+        <input type="button" value="Mostrar" onClick="mostrarSeleccionados()">
+    </form>
+
+    <script>
+        function mostrarSeleccionados(){
+            let deportesSeleccionados = "";
+            if(document.getElementById('checkbox1').checked) {
+                deportesSeleccionados = deportesSeleccionados + "Fútbol ";
+            }
+            if(document.getElementById('checkbox2').checked) {
+                deportesSeleccionados = deportesSeleccionados + "Básket ";
+            }
+            if(document.getElementById('checkbox3').checked) {
+                deportesSeleccionados = deportesSeleccionados + "Tenis ";
+            }
+            alert('Los deportes seleccionados son ' + deportesSeleccionados);
+        }
+        
+    </script>
+</body>
+</html>
