@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ingresar valores por teclado.
+        Los valores menores a 100 ingresarlos al principio del vector 
+        y los mayores o iguales a 100 ingresarlos al final. 
+        Se finaliza la carga de datos al ingresar el cero. 
+        Cuando sale del do/while extraer el último valor ingresado que es el cero del vector. 
+        Imprimir el vector en la página
+    </p>
+
+    <script>
+        let valor;
+        var vec = [];
+        do {
+            valor = parseInt(prompt('Ingrese un valor'));
+            if(valor >= 100) {
+                vec.push(valor);
+            } else {
+                vec.unshift(valor);
+            }
+        } while(valor != 0);
+        vec.shift();
+        document.write('Los valores del vector son: <br>')
+        for(let i=0;i<vec.length;i++){
+            document.write(vec[i] + '<br>');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+      El método toString del objeto Array retorna un string con todos los elementos del vector separados por coma.
+    </p>
+    <script>
+        let vec = new Array(10);
+        for (let f = 0; f < vec.length; f++) {
+            vec[f] = parseInt(Math.random() * 1001);
+        }
+        let cadena = vec.toString();
+        document.write(cadena);
+    </script>
+    
+</body>
+</html>

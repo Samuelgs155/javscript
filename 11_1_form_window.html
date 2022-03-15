@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Confeccionar una página que permita abrir otra ventana cuando se presiona un botón.
+         Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles. 
+    </p>
+    <form>
+        <br>
+        <input type="button" value="open con parámetros" onClick="abrirVentana()">
+        <br>
+    </form>
+
+    <script>
+        function abrirVentana() {
+            let ventana = open('', '_blank', 'width=600,height=300');
+            ventana.document.write("Esto es lo primero que aparece<br>");
+        }
+    </script>
+</body>
+</html>

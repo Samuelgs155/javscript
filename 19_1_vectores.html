@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Confeccionar una clase persona que permita almacenar el nombre y la edad. 
+        Luego definir un vector de 4 componentes de tipo persona. 
+        Imprimir el nombre de la persona de mayor edad; decir también si hay más de una persona con la edad mayor. 
+    </p>
+
+    <script>
+        function Persona() {
+            this.nombre = prompt('Ingrese nombre de la persona:');
+            this.edad = parseInt(prompt('Ingrese edad:'));
+            this.imprimirNombre = function() {
+                document.write(this.nombre + ' que tiene una edad ' + this.edad + '<br>');
+            }
+        }
+
+        let vector = new Array(4);
+        vector[0] = new Persona();
+        vector[1] = new Persona();
+        vector[2]  = new Persona();
+        vector[3]  = new Persona();
+        let posmayor = 0;
+        for (let f = 1; f < vector.length; f++) {
+            if (vector[f].edad > vector[posmayor].edad) {
+                posmayor = f;
+            }
+        }
+        document.write('Personas con mayor edad:<br>');
+        for (let f = 0; f < vector.length; f++) {
+            if (vector[f].edad == vector[posmayor].edad) {
+                vector[f].imprimirNombre();
+            }
+        }
+    </script>
+</body>
+</html>

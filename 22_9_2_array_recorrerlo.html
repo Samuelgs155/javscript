@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let vec = [10, 20, 30, 40, 50];
+        for (let indice in vec) {
+            document.write('indice:' + indice);
+            document.write(' valor=' + vec[indice] + '<br>');
+        }
+
+        let vec2 = [10, 20, 30, 40, 50];
+        vec2.forEach(function(componente, indice) {
+            document.write('Posición:' + indice + ' = ');
+            document.write(componente + '<br>');
+        })
+    </script>
+
+</body>
+
+</html>

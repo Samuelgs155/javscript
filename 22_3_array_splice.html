@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Crear un vector con una lista de valores.
+        Luego borrar las componentes donde hay un 2 y al mismo tiempo insertar dos elementos con el valor 1. 
+    </p>
+    <script>
+        let vec = [0, 7, 2, 3, 4, 2, 6, 2, 8, 2];
+        document.write('vector original<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + ' ');
+        }
+        let indice = 0;
+        do {
+            if (vec[indice] == 2) {
+                vec.splice(indice, 1, 1, 1);
+            }
+            indice++;
+        } while (indice < vec.length);
+        document.write('<br>vector modificado<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + ' ');
+        }
+
+    </script>
+</body>
+</html>

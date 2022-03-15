@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) 
+        y tres métodos: cargarvalor1, cargarvalor2 y retornarresultado. Implementar la clase suma.
+    </p>
+
+    <script>
+        function Suma(valor1, valor2) {
+            this.valor1 = valor1;
+            this.valor2 = valor2;
+
+            this.primerValor = function(valor1) {
+                this.valor1 = valor1;
+            }
+            this.segundoValor = function(valor2) {
+                this.valor2 = valor2;
+            }
+            this.retornarResultado = function() {
+                return this.valor1 + this.valor2;
+            }
+        }
+
+        let s = new Suma(5, 10);
+        s.primerValor(10);
+        s.segundoValor(20);
+        document.write('<p>La suma de los dos valores es: '+s.retornarResultado()+'</p>');
+    </script>
+</body>
+</html>

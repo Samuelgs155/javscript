@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000. 
+        Luego extraer los dos últimos elementos sumarlos y mostrarlos. 
+        Imprimir también el tamaño final del vector. 
+    </p>
+
+    <script>
+        var vec = [];
+        for(let i=0;i<5;i++){
+            vec[i] = parseInt(1 + Math.random()*1000);
+        }
+        extraer(vec);
+        document.write('El tamaño del vector es de ' + vec.length + ' elementos.');
+
+        function extraer(arr) {
+            let suma = arr[arr.length - 2] + arr[arr.length - 1];
+            document.write('La suma de los dos últimos elementos es: ' + suma + '<br>');
+        }
+    </script>
+</body>
+</html>

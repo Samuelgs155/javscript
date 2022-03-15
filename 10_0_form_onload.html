@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onLoad="activarPrimerControl()">
+    <p>
+        fijar el foco en algún control de un formulario
+    </p>
+    <form>
+        <p>
+            Ingrese su nombre:
+            <input type="text" id="nombre">
+        </p>
+        <p>
+            Ingrese su edad:
+            <input type="text" id="edad"><br>
+        </p>
+        <p>
+            <input type="button" value="Confirmar">
+        </p>
+        
+    </form>
+
+    <script>
+        function activarPrimerControl() {
+            document.getElementById('nombre').focus();
+        }
+    </script>
+</body>
+</html>

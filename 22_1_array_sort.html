@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Cargar los sueldos de un conjunto de empleados. 
+        Finalizar la carga al ingresar cero. Mostrar por pantalla los sueldos ordenados de mayor a menor. 
+    </p>
+
+    <script>
+        let sueldo;
+        let vec = [];
+        let contador = 0;
+        do {
+            sueldo = parseInt(prompt('Ingrese el sueldo del empleado'));
+            if(sueldo != 0) {
+                vec[contador++] = sueldo;
+            }            
+        } while(sueldo != 0);
+
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + '<br>');
+        }
+        vec.sort(function(x, y) {
+            if (x > y)
+                return 1;
+            else
+                return -1;
+        });
+        document.write('Vector después de ordenarlo<br>');
+        for (let f = 0; f < vec.length; f++) {
+            document.write(vec[f] + '<br>');
+        }
+
+    </script>
+</body>
+</html>
