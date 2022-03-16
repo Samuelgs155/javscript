@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Confeccionar una función que reciba un parámetro y defina una variable local. 
+        Definir dentro de la función que acabamos de crear una función anidada que contenga un parámetro.
+        En la función anidada imprimir el parámetro de la función que la contiene, 
+        el parámetro que tiene la función anidada y el valor de la variable local de la función principal. 
+    </p>
+
+    <script>
+        function f1(x) {
+            function f2(y) {
+                document.write('Parámetro de la función exterior:' + x + '<br>');
+                document.write('Parámetro de la función anidada:' + y + '<br>');
+                document.write('variable local de la función exterior:' + z + '<br>');
+            }
+
+            let z = 1;
+            f2(2);
+        }
+
+        f1(3);
+    </script>
+</body>
+</html>
