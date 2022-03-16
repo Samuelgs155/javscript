@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Elaborar un programa que muestre un div de color rojo. 
+        Cuando se presione cambiar el color a amarillo y luego de soltar el botón del mouse volver a pintar de rojo. 
+    </p>
+    <p>Presione el recuadro y suelte el botón del mouse.</p>
+    <div style="width:200px;height:200px;background:#ff0000" id="recuadro">
+    </div>
+
+    <script>
+        document.getElementById('recuadro').addEventListener('mousedown', colorAmarillo);
+        document.getElementById('recuadro').addEventListener('mouseup', colorRojo);
+
+        function colorAmarillo() {
+            document.getElementById('recuadro').style.backgroundColor = '#ffff00';
+        }
+        function colorRojo() {
+            document.getElementById('recuadro').style.backgroundColor = '#ff0000';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Realizar un programa que muestre en un div el número 2. 
+        Cada vez que se hace doble clic sobre el mismo duplicar el valor contenido en el div. 
+    </p>
+
+    <div style="width:200px;height:200px;background:#ff5500" id="recuadro">
+        2
+    </div>
+
+    <script>
+        document.getElementById('recuadro').addEventListener('dblclick', clickDoble);
+
+        function clickDoble() {
+            let valor = document.getElementById('recuadro').innerHTML;
+            valor = parseInt(valor);
+            let resultado = valor * 2;
+            document.getElementById('recuadro').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

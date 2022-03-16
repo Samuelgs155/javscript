@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Implementaremos para ver su funcionamiento una página que muestre un div que capture el evento mousemove 
+        y como acción incrementaremos un contador para saber la cantidad de veces que se disparó el evento.
+    </p>
+    <div id="recuadro" style="width:200px;height:200px;background:#ff0000">
+    </div>
+
+    <script>
+        document.getElementById('recuadro').addEventListener('mousemove', vecesLanzado);
+        var contador = 0;
+        function vecesLanzado() {
+            contador++;
+            document.getElementById('recuadro').innerHTML = contador;
+        }
+    </script>
+</body>
+</html>
