@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cronometro {
+            font-size: 50px;
+            color: #0a0;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Mostrar un cronómetro que comience en cero y se incremente en uno cada vez que pase un segundo.
+        Disponer un botón para poder detener o reiniciar el cronómetro.
+    </p>
+    <span id="cronometro">0</span>
+    <br>
+    <input type="button" id="boton1" value="detener">
+    <script>
+        let reloj;
+        reloj = setInterval(procesar, 1000);
+        document.getElementById('boton1').addEventListener('click', presionBoton);
+
+        function procesar() {
+            let nro = parseInt(document.getElementById('cronometro').innerHTML);
+            nro++;
+            document.getElementById('cronometro').innerHTML = nro;
+        }
+
+        function presionBoton() {
+            if (document.getElementById('boton1').value == 'detener') {
+                clearInterval(reloj);
+                document.getElementById('boton1').value = 'continuar';
+            } else {
+                reloj = setInterval(procesar, 1000);
+                document.getElementById('boton1').value = 'detener';
+            }
+        }
+    </script>
+</body>
+</html>

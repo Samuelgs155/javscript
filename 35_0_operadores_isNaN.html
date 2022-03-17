@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Realizar la carga de dos valores enteros por teclado utilizando la función prompt. 
+        Calcular la suma previo controlar que los dos valores sean de tipo numérico.
+    </p>
+    <script>
+        var val1 = parseInt(prompt('Ingrese el valor 1'));
+        var val2 = parseInt(prompt('Ingrese el valor 2'));
+        if(!isNaN(val1) && !isNaN(val1)) {
+            let suma = val1 + val2;
+            alert('La suma de ' + val1 + ' y ' + val2 + ' es ' + suma);
+        } else {
+            alert('Alguno de los datos no es numérico.')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ingresar el sueldo bruto de un trabajador.
+        Si supera a 10000 aplicar un descuento del 10%, en caso contrario el descuento es del 5%.
+    </p>
+    <script>
+        let sueldo = parseInt(prompt('Ingrese el sueldo de un trabajador:'));
+        sueldo > 10000 ? sueldo = sueldo * 0.90 : sueldo = sueldo * 0.95;
+        alert('El sueldo con el descuento es de: ' + sueldo);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Se ingresan por teclado dos números (emplear parseFloat para convertirlos) 
+        mostrar un mensaje si alguno de los dos no es un número (isNaN). 
+        Luego si son valores numéricos proceder a multiplicarlos 
+        y verificar si el resultado es finito (isFinite) para mostrar el resultado. 
+    </p>
+    <script>
+        var val1 = parseFloat(prompt('Ingrese el valor 1'));
+        var val2 = parseFloat(prompt('Ingrese el valor 2'));
+        if(!isNaN(val1) && !isNaN(val1)) {
+            let prod = val1 * val2;
+            alert('El producto de ' + val1 + ' y ' + val2 + ' es ' + prod);
+            if (isFinite(prod)) //false
+                document.write('El producto tiene un valor finito que es el ' + prod);
+            else
+                document.write('El producto  no tiene un valor finito que es el ' + prod);
+        } else {
+            alert('Alguno de los datos no es numérico.')
+        }
+    </script>
+</body>
+</html>
