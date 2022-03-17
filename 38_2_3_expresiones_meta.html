@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        La sintaxis de las expresiones regulares define tres metacaracteres que pueden 
+        utilizarse en lugar de la sintaxis vista en el concepto anterior.
+        Caracteres:
+        ?    busca cero o una ocurrencia en el string
+            remplaza a    {0,1}
+        *    busca cero o más ocurrencias en el string
+            remplaza a    {0,}
+        +    busca una o más ocurrencias en el string
+            remplaza a    {1,}
+    </p>
+    <p>
+        Ingresar un valor numérico entero o real, se debe validar que se 
+        ingrese al menos un número previo al operador punto que es opcional y finalizar con un número obligatoriamente.
+    </p>
+    <script type="text/javascript">
+        let valor = prompt('Ingrese un valor numérico entero o real:');
+        let patron = /^[0-9]+\.?[0-9]++$/;
+        if (patron.test(valor))
+            document.write('Tiene un formato correcto');
+        else
+            document.write('Formato incorrecto');
+    </script>
+</body>
+</html>

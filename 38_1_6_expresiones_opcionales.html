@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ahora veremos el significado de los caracteres [] en una expresión regular. 
+        Se emplea estos caracteres para encerrar los caracteres permitidos.
+    </p>
+    <p>
+        Ingresar una oración por teclado y luego mostrar un mensaje si el string ingresado 
+        contiene al menos uno de los caracteres
+        que son un comando o metacaracter para las expresiones regulares:
+    </p>
+    <script>
+        // La tarde estaba soleada! true
+        // La tarde estaba soleada false
+        let oracion = prompt('Ingrese una oracion');
+        let patron = /[\^$.*+?=!:|\\/()\[\]{}]/;
+        if (patron.test(oracion))
+            alert('La oración tiene al menos un carácter ^ $. * +? =! : | \ / () [] {}');
+        else
+            alert('La oración no tiene ningún carácter ^ $. * +? =! : | \ / () [] {}');
+    </script>
+</body>
+</html>

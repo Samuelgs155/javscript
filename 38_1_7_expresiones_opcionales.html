@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ahora veremos el significado de los caracteres [] en una expresión regular. 
+        Se emplea estos caracteres para encerrar los caracteres permitidos.
+    </p>
+    <p>
+        Ingresar todos los caracteres con significada especial en las 
+        expresiones regulares en el siguiente orden: ^$.*+?=!:|\/()[]{} 
+        (es necesario escapar todos los metacaracteres):
+    </p>
+    <script>
+        let cadena = prompt('Ingrese esos caracteres especiales para expresiones regulares en este mismo orden: ^$.*+?=!:|\/()[]{} ');
+        let patron = /^\^\$\.\*\+\?\=\!\:\|\\\/\(\)\[\]\{\}$/;
+        if (patron.test(cadena))
+            alert('Orden correcto');
+        else
+            alert('Incorrecto');
+    </script>>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor = prompt('Ingrese un numero entero positivo de 3 dígitos');
+        let patron = new RegExp('^[0-9]{3}$');
+        if (patron.test(valor))
+            alert('Se ingresó un valor entero positivo de 3 dígitos');
+        else
+            alert('No se ingresó un valor entero positivo de 3 dígitos');
+    </script>
+</body>
+</html>

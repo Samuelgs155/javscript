@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Los dos primeros caracteres con un significado especial en una expresión 
+        regular son: ^ principio de cadena y $ fin de cadena.
+        Cuando queremos controlar si un string comienza con un determinado carácter 
+        o conjunto de caracteres podemos implementar una expresión regular antecediendo al 
+        o los caracteres el símbolo ^.
+    </p>
+    <p>
+        Ingresar una oración y mostrar un mensaje si la misma comienza con el carácter '-'.
+        Otro mensaje si comienzo con la palabra 'hora'.
+    </p>
+    <script>
+        let oracion = prompt('Ingrese una oración');
+        let patron1 = /^-/;
+        if (patron1.test(oracion))
+            alert('Comienza la oración con el carácter -');
+        else
+            alert('No comienza la oración con el carácter -');
+        let patron2 = /^hora/;
+        if (patron2.test(oracion))
+            alert('Comienza la oración con la palabra hora');
+        else
+            alert('No comienza la oración con la palabra hora');
+    </script>
+</body>
+</html>

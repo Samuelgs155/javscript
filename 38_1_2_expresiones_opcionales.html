@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ahora veremos el significado de los caracteres [] en una expresión regular. 
+        Se emplea estos caracteres para encerrar los caracteres permitidos.
+    </p>
+    <p>
+        Controlar si la palabra ingresada comienza con el primer carácter 
+        alfabético ya sea en mayúsculas o en minúsculas:
+    </p>
+    <script>
+        let palabra = prompt('Ingrese una palabra');
+        let patron = /^[a-zA-Z]/;
+        if (patron.test(palabra))
+            alert('La palabra comienza con un carácter alfabético (mayúscula o minúscula)');
+        else
+            alert('La palabra no comienza con un carácter alfabético (mayúscula o minúscula)');
+    </script>
+</body>
+</html>
