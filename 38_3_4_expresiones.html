@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Permite analizar entre varias opciones posibles. El carácter de alternancia es el |.
+        Ejemplos de sintaxis para alternancia entre opciones:
+        [uno|dos|tres]
+        [a|e]
+        [hombre|mujer]
+    </p>
+    <p>
+        Validar el ingreso de un típo y nro de factura.
+        Para que sea correcto el primer carácter debe ser a,b o c y el nro debe tener uno o más dígitos.
+    </p>
+    <script>
+        let factura = prompt('Ingrese tipo y nro de factura:');
+        let patron = /^[a|b|c]\d+$/;
+        if (patron.test(factura))
+            document.write('Se ingresó un tipo y nro de factura correcta');
+        else
+            document.write('Se ingresó un tipo y nro de factura incorrecta');
+    </script>
+</body>
+</html>

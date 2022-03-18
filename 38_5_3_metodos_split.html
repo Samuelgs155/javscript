@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Se tiene un string donde tenemos almacenados los nombres de personas seguido de sus edades. 
+        Generar un vector solo con las edades de todas las personas.
+    </p>
+    <script>
+        let cadena = 'juan 10 luis 43 pedro 21 carlos 33';
+        let vec = cadena.match(/\d+/g);
+        for (let x = 0; x < vec.length; x++) {
+            document.write(vec[x] + '<br>');
+        }
+    </script>
+</body>
+</html>

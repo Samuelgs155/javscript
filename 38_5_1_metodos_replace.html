@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        El método replace realiza una búsqueda y reemplazo. 
+        Se toma una expresión regular como primer parámetro 
+        y un string de reemplazo como su segundo argumento. Si la expresión regular tiene la bandera g, 
+        el método replace sustituye todas las coincidencias 
+        en la cadena de reemplazo, en caso contrario, se reemplaza sólo la primera coincidencia que encuentre.
+    </p>
+    <script>
+        let oracion = 'uno dos tres uno dos tres uno dos tres';
+        let cadena = oracion.replace(/uno/g, '1');
+        alert(cadena); //1 dos tres 1 dos tres 1 dos tres
+    </script>
+</body>
+</html>

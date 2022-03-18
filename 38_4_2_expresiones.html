@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Hasta ahora siempre hemos empleado el método test que retorna un valor true si 
+        el string cumple el patrón propuesto o false en caso contrario.
+        La clase RegExp cuenta con otro método llamado exec que retorna 
+        un vector con más datos en caso que el string cumpla el patrón propuesto o null si no cumple el patrón.
+    </p>
+    <p>
+        Veamos con un problema que datos extras retorna este vector.
+    </p>
+    <script>
+        let oracion = 'saliendo de la casa que esta en la montaña';
+        let patron1 = /la/;
+        let vector1 = patron1.exec(oracion);
+        document.write(vector1.index);
+        document.write('<br>');
+        document.write(vector1.input);
+        document.write('<br>');
+        let patron2 = /lax/;
+        let vector2 = patron2.exec(oracion);
+        document.write(vector2);
+    </script>
+</body>
+</html>

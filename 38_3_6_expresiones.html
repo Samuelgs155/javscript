@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Permite analizar entre varias opciones posibles. El carácter de alternancia es el |.
+        Ejemplos de sintaxis para alternancia entre opciones:
+        [uno|dos|tres]
+        [a|e]
+        [hombre|mujer]
+    </p>
+    <p>
+        Confeccionar una expresión regular que valide 
+        el ingreso del nombre de un día de la semana, un espacio y un número de 1 o 2 dígitos. 
+    </p>
+    <script>
+        let dato = prompt('Ingrese nombre del día de la semana y su número:');
+        let patron = /[lunes|martes|miercoles|jueves|viernes|sabado|domingo]\s\d{1,2}$/;
+        if (patron.test(dato))
+            document.write('correcto');
+        else
+            document.write('formato incorrecto');
+    </script>
+</body>
+</html>

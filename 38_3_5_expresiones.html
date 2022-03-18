@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Permite analizar entre varias opciones posibles. El carácter de alternancia es el |.
+        Ejemplos de sintaxis para alternancia entre opciones:
+        [uno|dos|tres]
+        [a|e]
+        [hombre|mujer]
+    </p>
+    <p>
+        Validar si una palabra comienza con los caracteres va o ba
+    </p>
+    <script>
+        let palabra = prompt('Ingrese una palabra que comience con va o ba:');
+        let patron = /^[va|ba]/;
+        if (patron.test(palabra))
+            document.write('La palabra comienza con va o ba');
+        else
+            document.write('La palabra no comienza con va o ba');
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        El metacarácter punto hace coincidir con cualquier carácter menos el salto de línea.
+
+        Por ejemplo si queremos validar el ingreso de cualquier cadena de 5 caracteres que comience con a 
+        y finalice con a podemos plantear la siguiente expresión regular:
+
+        let patron=/^a...a$/
+    </p>
+    <p>
+        verificar si un número tiene el formato 999.99
+    </p>
+    <script>
+        let nro = prompt('Ingrese un número con el formato 999.99');
+        let patron = /^\d{3}\.\d{2}$/;
+        if (patron.test(nro))
+            document.write('nro correcto');
+        else
+            document.write('nro incorrecto');
+    </script>
+</body>
+</html>

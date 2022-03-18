@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        El objeto RegExp se le puede aplicar tres modificadores que actúan sobre el patrón completo.
+        i: especifica que la búsqueda se realiza sin 
+        diferenciar entre mayúsculas y minúsculas.
+        g: indica que los caracteres a buscar pueden 
+        ser encontrados varias veces en la cadena 
+        de caracteres.
+        m: el modificador m realiza coincidencia de
+        patrones en el modo multilínea. En este modo, 
+        si la cadena a buscar contiene varias líneas, 
+        el metacaracter ^ y $ deben coincidir con el
+        inicio y final de una línea, además de que 
+        coincida con el comienzo y el final de una cadena.
+    </p>
+    <script>
+        let oracion = 'El auto tiene el mejor motor que elegimos';
+        let patron = /el/gi;
+        let vec = patron.exec(oracion);
+        document.write(vec.index); //0
+        document.write('<br>');
+        vec = patron.exec(oracion);
+        document.write(vec.index); //14
+        document.write('<br>');
+        vec = patron.exec(oracion);
+        document.write(vec.index); //33
+        document.write('<br>');
+        vec = patron.exec(oracion);
+        document.write(vec); //null
+    </script>
+</body>
+</html>
