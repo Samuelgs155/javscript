@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="boton1">Aries</button>
+        <button id="boton2">Tauro</button>
+        <button id="boton3">Geminis</button>
+    </div>
+    <img id="foto">
+
+    </div>
+    <script>
+        document.getElementById("boton1").addEventListener("click", () => mostrar('aries.png'));
+        document.getElementById("boton2").addEventListener("click", () => mostrar('tauro.png'));
+        document.getElementById("boton3").addEventListener("click", () => mostrar('geminis.png'));
+
+
+        function mostrar(signo) {
+            fetch(signo)
+                .then(response => response.blob())
+                .then(datos => document.getElementById("foto").setAttribute('src', URL.createObjectURL(datos)));
+        }
+
+    </script>
+</body>
+</html>

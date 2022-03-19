@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Esta característica de JavaScript nos permite asignar un valor por defecto a 
+        un parámetro para los casos en que en la llamada a la misma no se le envíe.
+        function sumar(x1,x2,x3=0)
+    </p>
+    <p>
+        Confeccionar una función que muestre la tabla de multiplicar. 
+        Si no llegan datos muestra por defecto la tabla del 2. 
+        Por defecto se muestran 10 términos de la tabla salvo que se indique un valor en contrario.
+        La función debe tener 2 parámetros y ambos deben tener un valor por defect
+    </p>
+    <script>
+        function generarTablaMultiplicar(num1 = 2, limite = 10) {
+            document.write("<table>");
+            document.write("<tr>");
+            document.write("<th>Multiplicador 1</th>");
+            document.write("<th>Multiplicador 2</th>");
+            document.write("<th>Resultado</th>");
+            document.write("</tr>");
+            for(var i=0; i<=limite;i++){
+                document.write("<tr>");
+                document.write("<td>" + num1 + "</td>");
+                document.write("<td>" + i + "</td>");
+                document.write("<td>" + (num1 * i) + "</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+
+        generarTablaMultiplicar();
+        document.write('<br><br>')
+        generarTablaMultiplicar(5);
+        document.write('<br><br>')
+        generarTablaMultiplicar(4,5);
+    </script>
+</body>
+</html>

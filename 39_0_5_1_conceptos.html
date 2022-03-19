@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Otra funcionalidad en JavaScript con la actualización ECMAScript 2015 (también llamada ES6) 
+        es la posibilidad de pasar una lista indefinida de valores y que los reciba un vector.
+        El concepto de parámetros Rest se logra antecediendo tres puntos al nombre del parámetro 
+        (el parámetro es un objeto de la clase Array con todas sus funcionalidades):
+        function sumar(...parametro)
+    </p>
+    <script>
+        function sumar(...valores) {
+            let suma = 0;
+            for (let x = 0; x < valores.length; x++)
+                suma += valores[x];
+            return suma;
+        }
+
+        document.write(sumar(10, 2, 44, 3));
+        document.write('<br>');
+        document.write(sumar(1, 2));
+        document.write('<br>');
+        document.write(sumar());
+        document.write('<br>');
+    </script>
+</body>
+</html>

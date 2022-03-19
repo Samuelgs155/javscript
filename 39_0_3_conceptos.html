@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Esta característica de JavaScript nos permite asignar un valor por defecto a 
+        un parámetro para los casos en que en la llamada a la misma no se le envíe.
+        function sumar(x1,x2,x3=0)
+    </p>
+    <p>
+        Confeccionar una función que reciba un vector y el tipo de lista HTML que se debe generar. 
+        Por defecto generar una lista no ordenada. Retornar una cadena con la lista HTML generada.
+    </p>
+    <script>
+        function generarLista(vec, tipo = '<ul>') {
+            let lista = tipo;
+            for (let x = 0; x < vec.length; x++)
+                lista += `<li>${vec[x]}</li>`;
+            if (tipo == '<ul>')
+                lista += '</ul>';
+            else
+                lista += '</ol>'
+            return lista;
+        }
+
+        const opciones1 = ['opción 1', 'opción 2', 'opción 3', 'opción 4', 'opción 5'];
+        document.write(generarLista(opciones1));
+
+        const opciones2 = ['opción a', 'opción b', 'opción c', 'opción d'];
+        document.write(generarLista(opciones2, '<ol>'));
+    </script>
+</body>
+</html>
