@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Javascript</title>
+</head>
+<body>
+    <h1>My First Javascript</h1>
+    <p>
+        Crea un botón que oculte un elemento HTML
+    </p>
+    <p>
+        <input type="button" onclick="ocultarHTML();" id="btnAccion" value="Click para ocultar el elemento de debajo"></input>
+    </p>
+    <div id="contenedor" style="width: 200px; height: 200px; background-color: blue;color: white;">
+        Este es el contenido que se va a ocultar.
+    </div>
+
+    <script>
+        function ocultarHTML() {
+            let texto = document.getElementById('btnAccion').value;
+            if(texto.includes("ocultar")) {
+                document.getElementById('contenedor').hidden = true;
+                document.getElementById('btnAccion').value = "Click para mostrar el elemento de debajo";
+            } else {
+                document.getElementById('contenedor').hidden = false;
+                document.getElementById('btnAccion').value = "Click para ocultar el elemento de debajo";
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Javascript</title>
+</head>
+<body>
+    <h1>My First Javascript</h1>
+    <p>
+        Crea un botón que cambie el estilo de un CSS
+    </p>
+    <p>
+        <input type="button" onclick="cambiarCSS();" value="Click para cambiar el color"></input>
+    </p>
+    <div id="contenedor" style="width: 200px; height: 200px; background-color: red;">
+        Este es el contenido que se va a modificar.
+    </div>
+
+    <script>
+        function cambiarCSS() {
+            document.getElementById('contenedor').style.fontSize='35px';
+            document.getElementById('contenedor').style.color='white';
+            document.getElementById('contenedor').style.background='blue';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Javascript</title>
+</head>
+<body>
+    <h1>My First Javascript</h1>
+    <p>
+        Crea un botón que haga mostrar la fecha y hora actual
+    </p>
+    <p>
+        <input type="button" onclick="mostrarFechaYHora();" value="Click para mostrar la fecha y la hora"></input>
+    </p>
+    <div id="fecha">
+
+    </div>
+
+    <script>
+        function mostrarFechaYHora() {
+            document.getElementById('fecha').innerHTML = Date();
+        }
+    </script>
+</body>
+</html>
